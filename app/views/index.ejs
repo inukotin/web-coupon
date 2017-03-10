@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<script type="text/javascript">
-    if (window.location.hash && window.location.hash == '#_=_') {
-        window.location.hash = '';
-    }
-</script>
 <html>
 <head>
     <title><%= title %></title>
 </head>
-<body>
+<body ng-app="coupon-app">
+<section ng-view></section>
+
+    <script type="text/javascript">
+        window.user = <%- user || 'null' %>;
+    </script>
+
     <h1><%= title %></h1>
     <img src="img/coupon.gif" alt="coupon logo">
     <% if ( user ) { %>
@@ -19,5 +20,16 @@
     <a href="/login">Login</a>
     <% } %>
     <script type="text/javascript" src="/js/angular.js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/js/angular-resource/angular-resource.min.js"></script>
+
+    <script type="text/javascript" src="/users/users.client.module.js"></script>
+    <script type="text/javascript" src="/users/services/authentication.client.service.js"></script>
+
+    <script type="text/javascript" src="/example/example.client.module.js"></script>
+    <script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
+    <script type="text/javascript" src="/example/config/example.client.routes.js"></script>
+
+    <script type="text/javascript" src="/app.js"></script>
 </body>
 </html>
