@@ -21,14 +21,15 @@ How to set PATH variable:
 2. run export PATH=copiedString/usr/local/bin:
 - the copied string is just what $PATH returns with a / added and /usr/local/bin:
 
-Install Mongodb:
-1. brew install mongodb
 
 Cloning the repo: 
 git clone git@github.com:inukotin/web-coupon.git
 
-Get permissions for data/db:
-1. Go to root directory of application
+Install Mongodb:
+1. brew install mongodb
+
+Set up db from root directory of application:
+1. mkdir -p /data/db
 2. sudo chown -R `id -un` /data/db
 
 Install bower using npm: npm install -g bower
