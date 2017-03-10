@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        window.location.hash = '';
+    }
+</script>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <img src="img/coupon.gif" alt="coupon logo">
+    <% if ( user ) { %>
+    <h2>Hello <%=user%> </h2>
+    <a href="/logout">Logout</a>
+    <% } else { %>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    <% } %>
+</body>
+</html>

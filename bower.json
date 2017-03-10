@@ -1,0 +1,20 @@
+{
+  "name": "web-coupon",
+  "description": "frontend dependencies for coupon app",
+  "main": "",
+  "authors": [
+    "Naren Inukoti"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3"
+  }
+}
